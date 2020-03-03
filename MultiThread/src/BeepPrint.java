@@ -10,6 +10,19 @@ public class BeepPrint {
             try { Thread.sleep(500); }
             catch (Exception e) { }
         }
+
+        Thread nameThread = Thread.currentThread(); // Thread의 정적 메소드인 currentThread();로 현재 스레드의 참조를 얻을 수 있다.
+        System.out.println(nameThread.getName());
+
+        Thread threadA = new ThreadA();
+        System.out.println(threadA.getName());
+        threadA.start(); // ThreadA 시작
+
+        Thread threadB = new ThreadB();
+        System.out.println(threadB.getName());
+        threadB.start();
+
+
     }
 
 } 
