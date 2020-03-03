@@ -1,4 +1,4 @@
-public class BeepPrint {
+public class BeepPrint extends Thread {
 
     public static void main(String[] args) {
         Runnable beepTask = new BeepTask(); // BeepTask 객체 생성
@@ -21,6 +21,18 @@ public class BeepPrint {
         Thread threadB = new ThreadB();
         System.out.println(threadB.getName());
         threadB.start();
+
+
+        for(int i=0; i<10; i++) { // thread 우선순위에 따른 스레드 스케쥴링 학습
+            thread = new CalcThread("Thread" + i);
+            if (i != 10) {
+                thread.setPriority(Thread.MIN_PRIORITY);
+            }
+            else {
+                thread.setPriority(Thread.MAX_PRIORITY);
+            }
+            thread.start();
+        }
 
 
     }
