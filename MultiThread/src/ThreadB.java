@@ -1,4 +1,4 @@
-public class ThreadB extends Thread {
+public class ThreadB extends Thread{
 
     public boolean stop = false;
     public boolean work = true;
@@ -19,4 +19,5 @@ public class ThreadB extends Thread {
         }
         System.out.println("ThreadB 종료");
     }
-}
+
+} 
