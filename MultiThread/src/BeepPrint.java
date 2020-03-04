@@ -34,6 +34,22 @@ public class BeepPrint extends Thread {
             thread.start();
         }
 
+        // 스레드 실행 양보 - yield() 예제
+
+        threadA.start();
+
+        try { Thread.sleep(3000); } catch (InterruptedException e) { }
+        ((ThreadA) threadA).work = false;
+
+        /*
+        try { Thread.sleep(3000); } catch (InterruptedException e) { }
+        ((ThreadA) threadA).work = true;
+
+
+        try { Thread.sleep(3000); } catch (InterruptedException e) { }
+        ((ThreadA) threadA).stop = true;
+        ((ThreadB) threadB).stop = true;
+        */
 
     }
 
