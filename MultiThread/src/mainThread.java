@@ -50,9 +50,6 @@ public class mainThread extends Thread {
 
         System.out.println(sumThread.getSum());
 
-        try { Thread.sleep(3000); } catch (InterruptedException e) { }
-        ((ThreadA) threadA).work = false;
-
 
         /*
         try { Thread.sleep(3000); } catch (InterruptedException e) { }
