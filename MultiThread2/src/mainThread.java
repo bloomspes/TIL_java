@@ -31,6 +31,11 @@ public class mainThread { // wait, notify, notifyAll 연습. 파이썬의 멀티
         // TestGroup의 interrupt() 호출
         TestGroup.interrupt();
 
-    }
+        Thread thread = new PrintThread();
+        thread.start();
 
+        try { Thread.sleep(10000); } catch (InterruptedException e) { }
+
+        thread.interrupt();
+    }
 } 
