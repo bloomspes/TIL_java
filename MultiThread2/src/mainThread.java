@@ -1,5 +1,9 @@
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+
 public class mainThread { // wait, notify, notifyAll 연습. 파이썬의 멀티스레드와 비교해서 글을 써보자.
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         /*
         WorkObject sharedObject = new WorkObject();
 
