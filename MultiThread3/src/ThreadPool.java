@@ -4,6 +4,12 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class ThreadPool {
     public static void main(String[] args) throws Exception {
+        CallbackThread Callback = new CallbackThread();
+        Callback.doWork("10", "10");
+        Callback.doWork("5", "oh");
+        Callback.finish();
+
+
         // execute() 메소드로 작업 처리 요청
         ExecutorService executorService = Executors.newFixedThreadPool(3);
 
